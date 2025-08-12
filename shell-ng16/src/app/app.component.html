@@ -1,0 +1,40 @@
+<div class="card">
+  Shell running Angular {{ version }}
+  <p>
+    <button (click)="reset()">Reset page</button>
+  </p>
+  <p>
+    <a routerLink="/my-standalone-component"
+      >Load Angular standalone component named MyStandaloneComponent from
+      mfe1</a
+    >
+  </p>
+  <hr />
+  Standalone Angular component remotely loaded from mfe1 app using Angular
+  routing will show here
+  <router-outlet></router-outlet>
+  <hr />
+  <p>
+    <button type="button" (click)="loadMyStandalone()">
+      Dynamically load Angular standalone component named MyStandaloneComponent
+      from mfe1
+    </button>
+  </p>
+  <p>
+    <button type="button" (click)="RemoveComponent()">
+      Remove dynamically loaded Angular standalone component
+    </button>
+  </p>
+  <hr />
+  Standalone Angular component remotely loaded from mfe1 app using dynamic
+  component instantiation will show here
+  <ng-container #mfe></ng-container>
+  <hr />
+  Output messages received by the shell from the Standalone Angular component
+  remotely loaded from mfe1 app using dynamic component instantiation will show
+  here
+  <p>{{ messageFromComponent }}</p>
+  <hr />
+
+    <ng-container #vc></ng-container>
+</div>
